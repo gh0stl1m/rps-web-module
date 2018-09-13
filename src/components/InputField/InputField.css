@@ -1,0 +1,46 @@
+.label-container {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.label-container .label-text {
+  color: white;
+  cursor: text;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transform: translateY(-34px);
+  transition: all 0.3s;
+}
+
+.label-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 36px;
+  letter-spacing: -1px;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+  outline: 0;
+}
+
+.label-input:focus {
+  max-width: 100%;
+  width: 400px;
+}
+
+.label-text:focus {
+  color: white;
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+.label-input:valid + .label-text {
+  font-size: 13px;
+  transform: translateY(-74px);
+}

@@ -9,7 +9,7 @@ export default (function() {
       API_URL = 'http://api.uapp.co';
       break;
     default:
-      API_URL = 'http://localhost:8888';
+      API_URL = 'http://localhost:41000';
     break;
   }
   return {

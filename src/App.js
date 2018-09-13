@@ -4,12 +4,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // Components
 import MainPage from './components/MainPage';
+import SetupGame from './components/SetupGame';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
+          <Route path="/game/setup" component={SetupGame}/>
           <Route path="/" component={MainPage}/>
         </Switch>
       </BrowserRouter>
