@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+body {
+  box-sizing: content-box;
+  font-family: 'Cabin Sketch', cursive;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+h1, p {
+  text-align: center;
+}

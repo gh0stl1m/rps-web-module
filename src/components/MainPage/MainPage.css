@@ -1,0 +1,69 @@
+.main-container {
+  align-items: center; 
+  background: linear-gradient(to bottom, #7bdade, #185a9d); 
+  color: white;
+  display: flex;
+  font-size: 30px;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.main-container-button {
+  justify-self: center;
+  position: relative;
+  width: 200px;
+}
+
+.main-container-button > div {
+  background-color: white;
+  border-radius: 40px;
+  height: 60px;
+  justify-self: center;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 200px;
+}
+
+.main-container-titles {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 90vh;  
+  max-width: 500px;
+  padding: 0px 30px;
+}
+
+.main-container-titles button {
+  background-color: transparent;
+  border: 3px solid black;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Cabin Sketch', cursive;    
+  font-size: 20px;  
+  font-weight: bold;
+  height: 60px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 200px;
+  z-index: 2;
+}
+
+.main-container-titles button:hover {
+  animation-name: main-button;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+/* Animations */
+@keyframes main-button {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 8px;
+    left: 8px;
+  }
+}
