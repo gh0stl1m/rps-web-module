@@ -5,7 +5,7 @@ import React from 'react';
 import './MainPage.css';
 
 // Components
-import Button from '../Button';
+import ButtonLink from '../ButtonLink';
 
 const MainPage = () => {
   return (
@@ -13,7 +13,7 @@ const MainPage = () => {
       <div className="main-container-titles">
         <h1>Game of Drones</h1>
         <p>Invite a friend to settle your petty dispute live over the web ✌🏼</p>
-        <Button
+        <ButtonLink
           name="Get Started"
           linkTo="/game/setup"
         />

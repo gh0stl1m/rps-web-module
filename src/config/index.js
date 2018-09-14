@@ -3,10 +3,10 @@ export default (function() {
   let API_URL = '';
   switch(process.env.REACT_APP_ENV) {
     case 'production':
-      API_URL = 'http://api.uapp.co';
+      API_URL = 'http://test-app.co';
       break;
     case 'develop':
-      API_URL = 'http://api.uapp.co';
+      API_URL = 'http://test-app.com';
       break;
     default:
       API_URL = 'http://localhost:41000';

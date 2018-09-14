@@ -1,0 +1,49 @@
+.container-button-link {
+  justify-self: center;
+  position: relative;
+  width: 200px;
+}
+
+.container-button-link div {
+  background-color: white;
+  border-radius: 40px;
+  height: 60px;
+  justify-self: center;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 200px;
+}
+
+.container-button-link button {
+  background-color: transparent;
+  border: 3px solid black;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Cabin Sketch', cursive;    
+  font-size: 20px;  
+  font-weight: bold;
+  height: 60px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 200px;
+  z-index: 2;
+}
+
+.container-button-link button:hover {
+  animation-name: button-animation;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+/* Animations */
+@keyframes button-animation {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 8px;
+    left: 8px;
+  }
+}
