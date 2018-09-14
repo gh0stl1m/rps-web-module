@@ -2,13 +2,10 @@
 import React, { PureComponent } from 'react';
 
 // Styles
-import './SetupGame.css';
+import './InvitateJoin.css';
 
 // Api
-import { roomServices, userServices } from '../../api';
-
-// Config
-import config from '../../config';
+import { userServices } from '../../api';
 
 // Components
 import InputField from '../InputField';
@@ -21,25 +18,18 @@ class SetupGame extends PureComponent {
 
     this.state = {
       username: '',
-      gameUrl: '',
       roomId: '',
     };
   };
   // Life cycle methods
   componentDidMount() {
-    roomServices.create()
-      .then((data) => {
-        this.setState((prevState) => {
-          return {
-            ...prevState,
-            gameUrl: `${config.WEB_URL}/game/${data.room.id}/invitation`,
-            roomId: data.room.id,
-          };
-        });
-      })
-      .catch((err) => {
-        // TODO show modal on error
-      });
+    const { match } = this.props;
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        roomId: match.params.roomId,
+      }
+    });
   }
 
   // Methods
@@ -49,7 +39,7 @@ class SetupGame extends PureComponent {
 
     userServices.create(username)
       .then((data) => {
-        this.props.history.push(`/game/${roomId}/player/${data.user.id}?player=player1`);
+        this.props.history.push(`/game/${roomId}/player/${data.user.id}?player=player2`);
       })
       .catch((err) => {
         // TODO show modal on error
@@ -62,7 +52,7 @@ class SetupGame extends PureComponent {
     });
   }
   render() {
-    const { gameUrl, username }= this.state;
+    const { username }= this.state;
 
     return (
       <div className="container-game-setup">
@@ -75,8 +65,6 @@ class SetupGame extends PureComponent {
               handleChange={this.handleChange}
               value={username}
             />
-            <span className="game-url">{gameUrl}</span>
-            <p className="text-game-setup"> Send this link to your opponent to connect. </p>
             <div className="form-buttons">
               <Button
                 name="Start"

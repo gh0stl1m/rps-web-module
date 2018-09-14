@@ -1,0 +1,41 @@
+.container-game {
+  background: linear-gradient(to bottom, #7bdade, #185a9d);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container-choice-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container-options {
+  align-items: flex-end;
+  align-self: center;
+  display: flex;
+  height: 200px;
+}
+
+.text-player-waiting {
+  margin: auto;
+  font-size: 40px;
+}
+
+.container-game-button {
+  position: absolute;
+  bottom: 15%;
+  left: 45%;
+}
+.game-message {
+  font-size: 50px;
+  left: 22%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  width: 800px;
+}

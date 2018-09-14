@@ -1,0 +1,40 @@
+.element-container {
+  margin: 15px;
+  position: relative;
+}
+
+.element-container i {
+  border: 5px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 3em;
+  height: 80px;
+  line-height: 1.7;
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  z-index: 2;
+}
+
+.element-background {
+  background-color: white;
+  border-radius: 50%;
+  height: 80px;
+  left: 12px;
+  position: relative;
+  top: 12px;  
+  width: 80px;
+}
+
+.change-background {
+  animation: jump 0.7s 1 ease forwards;
+}
+
+@keyframes jump {
+  0% {
+    translate: 0px;
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}

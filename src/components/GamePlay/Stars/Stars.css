@@ -1,0 +1,10 @@
+.container-stars {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-stars i {
+  font-size: 35px;
+  margin: 5px;
+}
